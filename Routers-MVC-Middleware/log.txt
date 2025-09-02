@@ -1,0 +1,2 @@
+ method : GET | endPoint : /course/allCourse
+method : GET | endPoint : /course/allCourse

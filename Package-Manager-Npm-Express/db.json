@@ -1,0 +1,24 @@
+{
+  "course": [
+    {
+      "id" : 1,
+      "title": "intro of database",
+       "IA" : "murtaza",
+        "duration" : "2hr"
+    },
+
+    {
+      "id" :2,
+      "title": "intro of java",
+      "IA" : "kashish",
+      "duration" : "2hr"
+    },
+
+    {
+      "id" :3,
+      "title": "intro of python",
+      "IA" : "abishekh",
+      "duration" : "2hr"
+    }
+  ]
+}
