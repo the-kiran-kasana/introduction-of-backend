@@ -1,0 +1,12 @@
+{
+  "employees": [
+    {
+      "id" : 1,
+      "name" : "kiran kasana",
+      "position" : "softwere developer",
+      "department" : "computer science",
+      "salary" : 100000,
+      "status" : "active"
+    }
+  ]
+}

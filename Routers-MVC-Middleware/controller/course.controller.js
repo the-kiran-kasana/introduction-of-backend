@@ -3,6 +3,7 @@ const {getData , addAndUpdate} = require('../module/course.module')
 
 const getAllCourse = (req , res) => {
    let course = getData().courses;
+   console.log(course);
    res.status(200).json({msg : "list of course" , course})
 }
 

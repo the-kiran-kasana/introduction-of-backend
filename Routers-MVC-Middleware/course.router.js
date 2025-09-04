@@ -1,6 +1,7 @@
 const express  = require("express");
 const courseRouter = express.Router();
 const {dataCheck} = require("./middlewere/dataCheck");
+const {limiter} = require("./middlewere/rateLimit");
 const {getAllCourse , addCourseData , deleteData ,getCourseById ,updateCourse} = require('./controller/course.controller')
 
 
