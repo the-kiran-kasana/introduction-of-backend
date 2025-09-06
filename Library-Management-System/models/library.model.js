@@ -6,9 +6,9 @@ const LibrarySchema = new mongoose.Schema({
      status:{type:String ,require:true},
      borrowerName:{type:String ,require:true},
      overdueFees:{type:Number ,require:true},
-     borrowDate:{type:Date ,require:true},
-     dueDate:{type:Date ,require:true},
-     returnDate:{type:Date ,require:true}
+     borrowDate:{type:Date ,require:true ,default: Date.now },
+     dueDate:{type:Date ,require:true,default: Date.now },
+     returnDate:{type:Date ,require:true,default: Date.now }
 });
 
 

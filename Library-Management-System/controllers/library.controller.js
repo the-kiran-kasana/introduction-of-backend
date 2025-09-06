@@ -20,7 +20,7 @@ const addNewBook = async (req ,res) => {
              const book = await LibraryModel.create(newBook);
              res.status(200).json({msg:"book is added",book});
           }catch(err){
-             res.status(500).json({msg:"priority is wrong" , err});
+             res.status(500).json({msg:"book is wrong" , err});
           }
 }
 
