@@ -47,14 +47,36 @@ const deleteBook = async (req ,res) => {
              const {id} = req.params;
              const DeleteTask = await LibraryModel.findByIdAndDelete(id);
              if(!DeleteTask){
-               return res.status(500).json({msg:"task is not found"});
+               return res.status(404).json({msg:"task is not found"});
              }
-             res.status(201).json({msg:"delete successfully" , DeleteTask});
+             res.status(200).json({msg:"delete successfully" , DeleteTask});
         }catch(err){
-           res.status(500).json({msg:"somthing wrong"});
+           res.status(404).json({msg:"somthing wrong"});
         }
 }
 
 
 
-module.exports =  {getAllBook , addNewBook , updateBook ,deleteBook};
+const overdueFeesFun = async (req, res) => {
+  try {
+    const books = await LibraryModel.find();
+
+    for (let book of books) {
+      if (book.returnDate && book.returnDate < Date.now()) {
+        book.overdueFees = (book.overdueFees || 0) + 10;
+        await book.save();
+      }
+    }
+
+   // res.status(200).json({ msg: "Overdue fees updated successfully" });
+  } catch (err) {
+    console.error("Overdue fee error:", err);
+    //res.status(500).json({ msg: "Something went wrong", error: err.message });
+  }
+};
+
+
+
+
+
+module.exports =  {getAllBook , addNewBook , updateBook ,deleteBook ,overdueFeesFun};
