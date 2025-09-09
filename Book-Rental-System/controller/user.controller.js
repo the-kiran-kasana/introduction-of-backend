@@ -21,29 +21,6 @@ const AddUsers = async (req ,res) => {
       }
 }
 
-//
-//
-//
-//const RentBooks = async (req ,res) => {
-//      try{
-//         let books = await BookModel.create(req.body);
-//         res.status(200).json({msg : "added a new users" , books});
-//      }catch(err){
-//         res.status(500).json({msg : "somthing happen wrong"});
-//      }
-//}
-//
-//
-//
-//const ReturnBooks = async (req ,res) => {
-//      try{
-//         let books = await BookModel.create(req.body);
-//         res.status(200).json({msg : "added a new users" , books});
-//      }catch(err){
-//         res.status(500).json({msg : "somthing happen wrong"});
-//      }
-//}
-
 
 
 
