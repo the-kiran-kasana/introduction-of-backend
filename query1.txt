@@ -1,0 +1,95 @@
+1.  Find the total amount spent by each customer.
+
+    db.customers.aggregate([{$lookup : {
+      from : "orders",
+      localField:"_id",
+      foreignField:"customerId",
+      as:"orders"
+    }},
+      { $unwind: "$orders" },
+      {$group : {
+        _id : "$name",
+         totalAmount  : {$sum : "$orders.amount"}
+    }},{
+      $project : {
+        _id:0,
+        name:"$_id",
+        totalAmount:1
+      }
+    }])
+
+
+
+
+
+
+
+2. Retrieve order details along with corresponding customer information.
+    db.customers.aggregate([
+      {
+        $lookup: {
+          from: "orders",
+          localField: "_id",
+          foreignField: "customerId",
+          as: "orders"
+        }
+      },
+      {
+        $project: {
+          _id: 0,
+          name: 1,
+          city: 1,
+          orders: {
+            product: 1,
+            amount: 1
+          }
+        }
+      }
+    ])
+
+
+
+
+
+3.  Find orders where the amount is greater than Rs. 500.
+
+    db.orders.aggregate([{$match : {amount : {$gt : 500}}}])
+
+
+
+
+
+4 . Calculate the average order amount per customer.
+
+    db.orders.aggregate([
+      {
+        $group: {
+          _id: "$customerId",
+          totalAmount: { $sum: "$amount" },
+          numOfOrders: { $sum: 1 }
+        }
+      },
+      {
+        $project: {
+          _id: 0,
+          customerId: "$_id",
+          averageAmount: { $divide: ["$totalAmount", "$numOfOrders"] } // ✅ correct
+        }
+      }
+    ])
+
+
+
+
+5.  Retrieve all orders with customer details, ensuring each order has an associated customer record.
+
+    db.customers.aggregate([{$lookup : {
+      from : "orders",
+      localField:"_id",
+      foreignField:"customerId",
+      as:"orders"
+    }},{
+      $project : {
+        _id:0
+      }
+    }])
