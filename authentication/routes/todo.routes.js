@@ -6,7 +6,7 @@ const authMiddleware = require("../middleware/auth.middleware");
 
 
 
-todoRoutes.post("/add-todo" , authMiddleware(["admin" , "user"]), async (req,res) => {
+todoRoutes.post("/add-todo" , authMiddleware(["admin" , "user "]), async (req,res) => {
    try{
        console.log(req.user)
        const todo = await todoModel.create({...req.body , userId : req.user});
