@@ -14,7 +14,7 @@ app.get("/contactus" , (req , res) =>{
 
 
 app.get("/about" , (req , res) =>{
-   res.json("Welcome to the About page!");
+   res.status(200).json("Welcome to the About page!");
 })
 
 

@@ -8,3 +8,5 @@ console.log(boxen("I am using my first external module!" ,{padding : 1 , title:"
 
 
 console.log(boxen("unicorns love rainbows" ,{ title:"Hurray!!!" , titleAlignment:"center" ,borderStyle:"round"}))
+
+console.log(boxen("here i am used multiple options of the boxen" , {title : "multiple options" , titleAlignment:"center" ,padding : 1 ,backgroundColor:'blue' }))

@@ -27,6 +27,15 @@ app.get("/systemDetails" , (req , res) => {
 })
 
 
+//app.get("/systemdetails" , (req , res) => {
+//
+//   let totalMem  = (os.totalmem()/(1024 * 1024 * 1024)).toFixed(2);
+//   let freeMem = (os.freemem() / (1024 * 1024 * 1024)).toFixed(2);
+//   res.json({"CPU core count" : os.platform()});
+//})
+
+
+
 app.get("/getip" , (req , res) => {
   dns.lookup("masaischool.com" , (err ,address,hostname) => {
    if(err) throw err;
