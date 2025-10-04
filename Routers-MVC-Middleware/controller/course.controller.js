@@ -43,7 +43,6 @@ const deleteData = (req,res) => {
       })
    }
 
-
    addAndUpdate(data);
    res.status(200).json({msg : "deleted course"})
 }

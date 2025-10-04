@@ -1,0 +1,95 @@
+{
+  "DishesData": [
+    {
+      "id": 1,
+      "name": "Margherita Pizza",
+      "cuisine": "Italian",
+      "type": "Vegetarian",
+      "price": 250
+    },
+    {
+      "id": 2,
+      "name": "Chicken Biryani",
+      "cuisine": "Indian",
+      "type": "Non-Vegetarian",
+      "price": 300
+    },
+    {
+      "id": 3,
+      "name": "Sushi Roll",
+      "cuisine": "Japanese",
+      "type": "Non-Vegetarian",
+      "price": 450
+    },
+    {
+      "id": 4,
+      "name": "Falafel Wrap",
+      "cuisine": "Middle Eastern",
+      "type": "Vegan",
+      "price": 180
+    },
+    {
+      "id": 5,
+      "name": "Cheeseburger",
+      "cuisine": "American",
+      "type": "Non-Vegetarian",
+      "price": 220
+    },
+    {
+      "id": 6,
+      "name": "Pasta Alfredo",
+      "cuisine": "Italian",
+      "type": "Vegetarian",
+      "price": 270
+    },
+    {
+      "id": 7,
+      "name": "Tacos",
+      "cuisine": "Mexican",
+      "type": "Non-Vegetarian",
+      "price": 200
+    },
+    {
+      "id": 8,
+      "name": "Paneer Butter Masala",
+      "cuisine": "Indian",
+      "type": "Vegetarian",
+      "price": 260
+    },
+    {
+      "id": 9,
+      "name": "Caesar Salad",
+      "cuisine": "Continental",
+      "type": "Vegetarian",
+      "price": 150
+    },
+    {
+      "id": 10,
+      "name": "Ramen",
+      "cuisine": "Japanese",
+      "type": "Non-Vegetarian",
+      "price": 400
+    },
+    {
+      "id": 11,
+      "name": "Veg Hakka Noodles",
+      "cuisine": "Chinese",
+      "type": "Vegetarian",
+      "price": 190
+    },
+    {
+      "id": 12,
+      "name": "Shawarma",
+      "cuisine": "Middle Eastern",
+      "type": "Non-Vegetarian",
+      "price": 230
+    },
+    {
+      "id": 13,
+      "name": "dal bhatii",
+      "cuisine": "Continental",
+      "type": "Vegetarian",
+      "price": 750
+    }
+  ]
+}
