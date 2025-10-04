@@ -71,7 +71,15 @@ app.put("/dishes/:id" , (req ,res) => {
     fs.writeFileSync("./db.json", JSON.stringify(dishList));
      res.status(201).json({msg : "deleted course"})
 
+
+       // Search dishes by name (case-insensitive)
+       const result = dishes.filter((dish) =>
+         dish.name.toLowerCase().includes(name.toLowerCase())
+       );
+
 })
+
+
 
 
 app.delete("/dishes/:id" , (req ,res) => {
