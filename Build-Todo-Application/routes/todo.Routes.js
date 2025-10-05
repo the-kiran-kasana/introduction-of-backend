@@ -4,14 +4,10 @@ const {getAllTodoListFn , addTodoListFn ,deleteTodoListFn ,updateTodoListFn} = r
 const todoRoutes = express.Router();
 
 
-
-
 todoRoutes.get("/getallList" , getAllTodoListFn);
 todoRoutes.post("/addTodoList" , taskCheck , addTodoListFn);
 todoRoutes.delete("/deleteTodoList/:id" , deleteTodoListFn);
 todoRoutes.put("/updateTodoList/:id" , updateTodoListFn);
-
-
 
 
 module.exports = {todoRoutes};

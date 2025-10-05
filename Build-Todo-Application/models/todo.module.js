@@ -10,4 +10,5 @@ const addNewTask = (data) => {
     fs.writeFileSync("./db.json" , JSON.stringify(data))
 }
 
+
 module.exports = {getReadFile ,addNewTask};

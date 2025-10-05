@@ -70,7 +70,4 @@ const updateTodoListFn = (req,res) => {
 
 
 
-
-
-
 module.exports =  {getAllTodoListFn , addTodoListFn ,deleteTodoListFn ,updateTodoListFn};
