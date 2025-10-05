@@ -1,12 +1,49 @@
 {
   "employees": [
     {
-      "id" : 1,
-      "name" : "kiran kasana",
-      "position" : "softwere developer",
-      "department" : "computer science",
-      "salary" : 100000,
-      "status" : "active"
+      "id": 1,
+      "name": "kiran kasana",
+      "position": "softwere developer",
+      "department": "computer science",
+      "salary": 100000,
+      "status": "active",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "mahesh kasana",
+      "position": "softwere developer",
+      "department": "computer science",
+      "salary": 1000000,
+      "status": "active",
+      "role": "hr"
+    },
+    {
+      "id": 3,
+      "name": "sapna kasana",
+      "position": "animal assistance",
+      "department": "computer science",
+      "salary": 10000,
+      "status": "active",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "name": "sapna kasana",
+      "position": "animal assistance",
+      "department": "computer science",
+      "salary": 10000,
+      "status": "active",
+      "role": "admin"
+    },
+    {
+      "id": 5,
+      "name": "suman kasana",
+      "position": "teacher",
+      "department": "math",
+      "salary": 10000,
+      "status": "active",
+      "role": "hr"
     }
   ]
 }
