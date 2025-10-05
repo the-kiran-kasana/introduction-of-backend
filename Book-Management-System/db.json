@@ -1,0 +1,60 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "genre": "Mystery",
+      "publishedYear": 2019,
+      "status": "available"
+    },
+    {
+      "id": 2,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "genre": "Self-Help",
+      "publishedYear": 2018,
+      "status": "borrowed"
+    },
+    {
+      "id": 3,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Fiction",
+      "publishedYear": 1988,
+      "status": "available"
+    },
+    {
+      "id": 4,
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "genre": "Science",
+      "publishedYear": 2011,
+      "status": "available"
+    },
+    {
+      "id": 5,
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "publishedYear": 1949,
+      "status": "borrowed"
+    },
+    {
+      "id": 6,
+      "title": "Educated",
+      "author": "Tara Westover",
+      "genre": "Biography",
+      "publishedYear": 2018,
+      "status": "available"
+    },
+    {
+      "id": 7,
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "author": "Mark Manson",
+      "genre": "Self-Help",
+      "publishedYear": 2016,
+      "status": "available"
+    }
+  ]
+}
