@@ -1,0 +1,22 @@
+{
+  "studentData": [
+    {
+      "name": "manvi Sharma",
+      "course": "Full Stack Web",
+      "batch": "April 2021",
+      "id": 2
+    },
+    {
+      "name": "archi",
+      "course": "Full Stack Web",
+      "batch": "jan 2019",
+      "id": 3
+    },
+    {
+      "name": "jalebi Sharma",
+      "course": "DATA SCIENCE",
+      "batch": "April 2025",
+      "id": 4
+    }
+  ]
+}
