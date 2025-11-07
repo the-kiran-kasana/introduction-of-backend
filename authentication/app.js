@@ -2,6 +2,7 @@ const express = require("express");
 const {connectDB} = require("./config/db")
 const {userRoutes} = require("./routes/user.routes");
 const {todoRoutes} = require("./routes/todo.routes");
+const redis = require("./config/redis")
 const app = express();
 app.use(express.json());
 require('dotenv').config()
@@ -9,6 +10,22 @@ require('dotenv').config()
 
 const PORT = process.env.PORT;
 connectDB();
+
+//redis.set("myKey" , "myValue form nodejs");
+//
+//
+//redis.get("myKey" , (err , result) => {
+//    if(err){
+//       console.log(err)
+//    }else{
+//       console.log(result)
+//    }
+//})
+//
+//
+//redis.get("myKey").then((result)=>{
+//   console.log(result)
+//})
 
 
 

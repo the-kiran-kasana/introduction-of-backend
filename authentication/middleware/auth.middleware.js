@@ -6,7 +6,8 @@
   const authMiddleware = (role) => {
     return (req , res , next) =>{
              //check the token if token is valid  allow next
-                     let token = req.headers?.authorization?.split(" ")[2];
+                     let token = req.headers?.authorization?.split(" ")[1];
+                     console.log(token)
 
                      if(token)
                      {
