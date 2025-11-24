@@ -1,0 +1,22 @@
+// Engine Class
+class Engine {
+  start() {
+    console.log("Engine started");
+  }
+}
+
+// Car Class (has Engine inside → Tight Coupling)
+class Car {
+  constructor() {
+    this.engine = new Engine(); // tightly coupled
+  }
+
+  drive() {
+    this.engine.start();
+    console.log("Car is driving");
+  }
+}
+
+// Usage
+const myCar = new Car();
+myCar.drive();
