@@ -1,0 +1,39 @@
+// Interface Simulation
+class IVehicle {
+  start() {
+    throw new Error("start() must be implemented");
+  }
+}
+
+// Car implements IVehicle
+class Car extends IVehicle {
+  start() {
+    console.log("Car is starting");
+  }
+}
+
+// Bike implements IVehicle
+class Bike extends IVehicle {
+  start() {
+    console.log("Bike is starting");
+  }
+}
+
+// Driver depends on IVehicle, NOT Car or Bike
+class Driver {
+  constructor(vehicle) {
+    this.vehicle = vehicle;  // Loose coupling
+  }
+
+  drive() {
+    this.vehicle.start();
+    console.log("Driving...");
+  }
+}
+
+// -------- OUTPUT TESTING --------
+const carDriver = new Driver(new Car());
+carDriver.drive();
+
+const bikeDriver = new Driver(new Bike());
+bikeDriver.drive();
