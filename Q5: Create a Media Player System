@@ -1,0 +1,37 @@
+// 1. Interface
+interface MediaFile {
+  play(): void;
+}
+
+// 2. Implementations
+class AudioFile implements MediaFile {
+  play(): void {
+    console.log("Playing audio file...");
+  }
+}
+
+class VideoFile implements MediaFile {
+  play(): void {
+    console.log("Playing video file...");
+  }
+}
+
+class PDFFile implements MediaFile {
+  play(): void {
+    console.log("Displaying PDF document...");
+  }
+}
+
+// 3. Media Player (loosely coupled)
+class MediaPlayer {
+  playMedia(file: MediaFile): void {
+    file.play();
+  }
+}
+
+// ---- TESTING ----
+const player = new MediaPlayer();
+
+player.playMedia(new AudioFile());
+player.playMedia(new VideoFile());
+player.playMedia(new PDFFile());
