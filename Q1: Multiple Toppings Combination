@@ -1,0 +1,57 @@
+// ---- Base Abstract Class ----
+class Beverage {
+  getDescription() {
+    throw new Error("getDescription() must be implemented");
+  }
+
+  getCost() {
+    throw new Error("getCost() must be implemented");
+  }
+}
+
+// ---- Green Tea ----
+class GreenTea extends Beverage {
+  getDescription() {
+    return "Green Tea";
+  }
+
+  getCost() {
+    return 40;
+  }
+}
+
+// ---- Decorator Base Class ----
+class ToppingDecorator extends Beverage {
+  constructor(beverage) {
+    super();
+    this.beverage = beverage;
+  }
+}
+
+// ---- Sugar Decorator ----
+class Sugar extends ToppingDecorator {
+  getDescription() {
+    return this.beverage.getDescription() + " + Sugar";
+  }
+
+  getCost() {
+    return this.beverage.getCost() + 10;
+  }
+}
+
+// ---- Honey Decorator ----
+class Honey extends ToppingDecorator {
+  getDescription() {
+    return this.beverage.getDescription() + " + Honey";
+  }
+
+  getCost() {
+    return this.beverage.getCost() + 20;
+  }
+}
+
+// ---- Usage ----
+const tea = new Honey(new Sugar(new GreenTea()));
+
+console.log(tea.getDescription()); // Green Tea + Sugar + Honey
+console.log(tea.getCost());        // 70
