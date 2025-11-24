@@ -1,0 +1,13 @@
+Abstract Class
+
+abstract class Beverage {
+  abstract getDescription(): string;
+  abstract getCost(): number;
+}
+
+
+
+const tea = new Sugar(new Sugar(new GreenTea()));
+
+console.log(tea.getDescription()); // Green Tea + Sugar + Sugar
+console.log(tea.getCost());        // 60
