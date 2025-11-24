@@ -1,0 +1,42 @@
+// Abstract Beverage
+class Beverage {
+  getDescription() {
+    throw new Error("getDescription() must be implemented");
+  }
+  getCost() {
+    throw new Error("getCost() must be implemented");
+  }
+}
+
+// Base Class
+class GreenTea extends Beverage {
+  getDescription() {
+    return "Green Tea";
+  }
+  getCost() {
+    return 40;
+  }
+}
+
+// Decorator Base Class
+class BeverageDecorator extends Beverage {
+  constructor(beverage) {
+    super();
+    this.beverage = beverage;
+  }
+}
+
+// Sugar Decorator
+class Sugar extends BeverageDecorator {
+  getDescription() {
+    return this.beverage.getDescription() + " + Sugar";
+  }
+  getCost() {
+    return this.beverage.getCost() + 10;
+  }
+}
+
+// TEST
+const tea = new Sugar(new GreenTea());
+console.log(tea.getDescription()); // Green Tea + Sugar
+console.log(tea.getCost());        // 50
